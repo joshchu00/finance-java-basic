@@ -4,8 +4,5 @@
 .classpath
 .settings/
 
-target/
-
-lib/
 log/
-data/
+target/
