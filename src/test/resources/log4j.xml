@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+<log4j:configuration>
+
+	<appender name="ConsoleAppender" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d][%5.5t][%-5p]%n%l%n%m%n%n" />
+		</layout>
+	</appender>
+ 
+	<appender name="DailyRollingFileAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="log/finance" />
+		<param name="DatePattern" value="'.'yyyyMMdd'.log'" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d][%5.5t][%-5p]%n%l%n%m%n%n" />
+		</layout>
+	</appender>
+	
+	<logger name="org.hibernate">
+		<level value="error" />
+	</logger>
+	
+	<root>
+		<priority value="debug" />
+		<appender-ref ref="ConsoleAppender" />
+		<!-- <appender-ref ref="DailyRollingFileAppender" /> -->
+	</root>
+
+</log4j:configuration>

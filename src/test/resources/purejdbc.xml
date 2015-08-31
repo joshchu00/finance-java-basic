@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="driver">com.mysql.jdbc.Driver</entry>
+	<entry key="url">jdbc:mysql://192.168.1.4/finance?useUnicode=true&amp;characterEncoding=UTF-8</entry>
+	<entry key="user">finance</entry>
+	<entry key="password">lab605</entry>
+</properties>
